@@ -52,12 +52,12 @@ body {
     transition: all 0.4s; }
   .navigation__link:hover, .navigation__link:active {
     background-position: 100%;
-    color: purple;
+    color: #800080;
     transform: translateX(1rem); }
 
 .header {
   height: 85vh;
-  background-color: orangered;
+  background-color: #800080;
   position: relative; }
   .header__logo-box {
     position: absolute;
@@ -71,3 +71,46 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 35rem; }
+  .accordion__item {
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    padding: 2.4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1.4rem;
+    row-gap: 2.4rem;
+    align-items: center;
+    text-transform: uppercase; }
+    .accordion__item__text {
+      font-size: 2rem; }
+  .accordion__icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    stroke: #800080; }
+
+.hidden-box {
+  display: none; }
+  .hidden-box__list {
+    list-style: none;
+    font-size: 1.2rem;
+    margin-left: 1.5rem; }
+    .hidden-box__list li {
+      font-weight: 500;
+      letter-spacing: 1px;
+      border-top: 1px solid #ddd;
+      padding-top: 1rem; }
+    .hidden-box__list li:not(:last-child) {
+      margin-bottom: 1rem; }
+
+.open {
+  border-top: 4px solid #7ed56f; }
+
+.open .hidden-box {
+  display: block; }
+
+.open .accordion__item__text {
+  color: #800080; }
