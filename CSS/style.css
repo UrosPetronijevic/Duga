@@ -56,7 +56,7 @@ body {
     transform: translateX(1rem); }
 
 .header {
-  height: 85vh;
+  height: 100vh;
   background-color: #800080;
   position: relative; }
   .header__logo-box {
@@ -72,12 +72,18 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
+.sidebar {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
 .accordion {
   display: flex;
   flex-direction: column;
-  width: 35rem; }
+  width: 35rem;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1); }
   .accordion__item {
-    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
     padding: 2.4rem;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -86,7 +92,9 @@ body {
     align-items: center;
     text-transform: uppercase; }
     .accordion__item__text {
-      font-size: 2rem; }
+      font-size: 1.5rem; }
+    .accordion__item:not(:first-child) {
+      border-top: 1px solid #ddd; }
   .accordion__icon {
     height: 1.4rem;
     width: 1.4rem;
